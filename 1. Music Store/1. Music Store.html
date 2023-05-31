@@ -1,0 +1,51 @@
+<html>
+<head>
+		<title> Music Store</title>
+		<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+				<img src="../Music Page Project/logo.png" class="logo">
+				<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">SPECIFICATIONS</a></li>
+						<li><a href="#">PRODUCTS</a></li>
+						<li><a href="#">CONNECT</a></li>
+				</ul>
+		</div>
+		<div class="content">
+				<div class="left-col">
+					<h1>ENJOY<br>THE<br>MUSIC</h1>	
+				</div>
+				<div class="right-col">
+					<p><br>Click Here to Listen</p>
+					<img src="../Music Page Project/play.png"  id="icon">
+				</div>
+		</div>
+	</div>
+
+	<audio id="mySong">
+		<source src="../Music Page Project/Harleys-In-Hawaii(PagalWorld).mp3" type="audio/mp3">
+	</audio>
+
+<script>
+	var mySong = document.getElementById("mySong");
+	var icon = document.getElementById("icon");
+
+	icon.onclick = function(){
+		if(mySong.paused)
+			{
+					mySong.play();
+					icon.src = "../Music Page Project/pause.png";
+			}	
+		else
+			{
+					mySong.pause();
+					icon.src = "../Music Page Project/play.png";
+			}
+	}
+</script>	
+</body>
+</html>
